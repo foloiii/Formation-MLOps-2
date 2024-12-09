@@ -24,10 +24,10 @@ jobs:
         run:  pip install -r requirements_test.txt
       - name: Run Linter
         run:  |
-          flake8
+          flake8 formation_indus_ds_avancee
       - name: Run Vulture
         run:  |
-          vulture ./formation_indus_ds_avancee --min-confidence 100
+          vulture formation_indus_ds_avancee --min-confidence 100
       - name: Run tests
         run:  |
-          make tests-unitaires
+          python -m pytest tests-unitaires
