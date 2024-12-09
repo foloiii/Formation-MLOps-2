@@ -27,7 +27,7 @@ jobs:
           flake8
       - name: Run Vulture
         run:  |
-          vulture setup.py 
+          vulture .
       - name: Run tests
         run:  |
           make tests-unitaires
